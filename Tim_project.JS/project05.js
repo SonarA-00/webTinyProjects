@@ -21,3 +21,4 @@ function getRandomQuestions(questions, numQuestions) {
 }
 const questions = loadQuestions();
 const getQuestions = getRandomQuestions(question, 2);
+/* not completed project*/
