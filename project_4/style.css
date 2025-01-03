@@ -41,7 +41,7 @@ body {
   clip-path: polygon(20% 0, 80% 0, 65% 100%, 45% 100%);
 }
 .clip3 {
-  background: url(Saitama.img/saitama3.jpeg)
+  background: url(Saitama.img/saitama3.jpeg);
   background-size: cover;
   background-position: center;
   clip-path: polygon(80% 0, 100% 0, 100% 100%, 50% 100%);
