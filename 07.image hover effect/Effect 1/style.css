@@ -1,0 +1,43 @@
+body {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(113, 50, 173);
+}
+.contianer {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.contianer img {
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(56, 51, 51);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  color: wheat;
+  transition: all 1s;
+  transform: translateX(-100%);
+}
+.contianer:hover .content {
+  content: " ";
+  transform: translateX(0);
+}
+.contianer:hover img {
+  transform: translateX(100%);
+}

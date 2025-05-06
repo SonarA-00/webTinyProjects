@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  padding: 10px;
+  background-color: hsl(1, 100%, 97%);
+  box-shadow: 0 3px 5px black;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  transition: width 0.6s linear;
+}
+nav.active {
+  width: 350px;
+}
+ul {
+  display: flex;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: width 0.6s linear;
+}
+nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+nav.active ul {
+  width: 100%;
+}
+nav ul li {
+  transform: rotate(0deg);
+  opacity: 0;
+  transition: all 0.6s linear;
+}
+nav ul li a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.icon {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+.icon .line {
+  position: absolute;
+  background-color: rgb(202, 8, 73);
+  width: 20px;
+  height: 2px;
+  left: 5px;
+  top: 10px;
+  cursor: pointer;
+}
+.icon:hover {
+  background-color: hsl(1, 100%, 87%);
+}
+.icon .line2 {
+  top: auto;
+  bottom: 10px;
+}
+nav:active .icon .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+  transition: all 0.6s linear;
+}
+nav:active .icon .line2 {
+  transform: rotate(765deg) translateY(-5.5px);
+  transition: all 0.6s linear;
+}
