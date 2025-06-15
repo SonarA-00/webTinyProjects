@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(41, 39, 39);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contianer {
+  position: relative;
+  width: 700px;
+  height: 500px;
+  background-image: url(Saitama.img/broimage.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s;
+}
+.clip1 {
+  background: url(Saitama.img/Saitama1.jpeg);
+
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 20% 0, 45% 100%, 0 100%);
+}
+.clip2 {
+  background: url(Saitama.img/saitama2.png);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(20% 0, 80% 0, 65% 100%, 45% 100%);
+}
+.clip3 {
+  background: url(Saitama.img/saitama3.jpeg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(80% 0, 100% 0, 100% 100%, 50% 100%);
+}
+.contianer:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.contianer .clip:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}

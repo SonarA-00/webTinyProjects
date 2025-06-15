@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --backgroudColor: hwb(288 0% 0%);
+  --containerColor: hwb(333 25% 11%);
+  --headingColor: hsl(0, 100%, 98%);
+  --subHeadingColor: hsl(0, 0%, 81%);
+  --buttonColor: hwb(333 45% 1%);
+}
+body {
+  background-color: var(--backgroudColor);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  background-color: var(--containerColor);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: -1px 20px 50px rgb(99, 2, 84);
+  backdrop-filter: blur(10px);
+  min-height: calc(100% - 55%);
+}
+h1 {
+  color: var(--headingColor);
+  margin: 10px auto;
+}
+.cityInput {
+  margin-top: 10px;
+  width: calc(100% - 90px);
+  height: calc(10px + 30px);
+  color: black;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 9px;
+  margin-bottom: 10px;
+}
+.searchBtn {
+  width: calc(100% - 65%);
+  height: calc(10px + 30px);
+  border: none;
+  border-radius: 7px;
+  background-color: var(--buttonColor);
+  color: var(--subHeadingColor);
+  font-size: 20px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+.searchBtn:hover {
+  background-color: hwb(333 0% 15%);
+}
+.weatherIcon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 35px rgb(62, 2, 29);
+  display: none;
+}
+.temperatureDiv {
+  font-size: 40px;
+  text-align: center;
+  color: var(--headingColor);
+}
+.weatherInfo {
+  font-size: 20px;
+  color: var(--subHeadingColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.weatherInfo .city {
+  font-weight: bold;
+}
+.hourlyForcast {
+  width: calc(100% - 30px);
+  height: 90px;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  margin: 20px auto;
+}
+.hourlyforecastIndiv {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  width: 80px;
+  margin-right: 10px;
+}
+.hourlyTime,
+.hourlyTem {
+  white-space: nowrap;
+  font-size: 13px;
+  color: var(--subHeadingColor);
+}
+.houlyIcon {
+  width: 40px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+.hourlyForcast::-webkit-scrollbar {
+  display: none;
+}
